@@ -43,29 +43,18 @@ if($_SESSION['admin_user']==true){
       </tr>
       <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
         <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=安全机构">安全机构</a></td>
-      </tr>
-      <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
-        <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=医院情况">医院情况</a></td>
-      </tr>
-      <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
-        <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=设备安全管理">设备安全管理</a></td>
+        <td align="left"><a href="indexs.php?lmbs=设备管理">设备管理</a></td>
       </tr>
 	   <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
         <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=危险物品管理">危险物品管理</a></td>
+        <td align="left"><a href="indexs.php?lmbs=危险化学品管理">危险化学品管理</a></td>
       </tr>
       <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
         <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=安全教育培训">安全教育培训</a></td>
+        <td align="left"><a href="indexs.php?lmbs=安全教育">安全教育</a></td>
       </tr>
       
-      <tr onMouseOver="this.bgColor='#9FCB3A'"onMouseOut="this.bgColor='#F5F5F5'" >
-        <td height="28" align="center">&nbsp;</td>
-        <td align="left"><a href="indexs.php?lmbs=安全统计分析">安全统计分析</a></td>
-      </tr>
+
       <tr>
         <td height="28" align="center">&nbsp;</td>
         <td align="left">&nbsp;</td>
@@ -94,20 +83,14 @@ if($_SESSION['admin_user']==true){
                 case "员工管理":
                     include("empo_manag.php");
                     break;
-                case "医院情况":
-                    include("hospi_info.php");
-                    break;
-                case "设备安全管理":
+                case "设备管理":
                     include("equip_manag.php");
                     break;
-                case "危险物品管理":
+                case "危险化学品管理":
                     include("dang_manag.php");
                     break;
-                case "安全教育培训":
+                case "安全教育":
                     include("training.php");
-                    break;
-                case "安全统计分析":
-                    include("sum_analy.php");
                     break;
                 default:
                     include("comp_info.php");

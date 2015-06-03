@@ -27,16 +27,10 @@
 <table width="800" height="600" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center" valign="middle">
-	<table width="635" height="372" border="0" align="center" cellpadding="0" cellspacing="0" >
+	<table width="635" height="372" border="0" align="center" cellpadding="0" cellspacing="0" background="images/logo.jpg">
     <form name="form1" method="post" action="index.php"  onsubmit="return chkinput(this)">
 		<tr>
-		  <td width="53" height="299"></td>
-		  <td width="94"></td>
-		  <td width="62"></td>
-		  <td colspan="3"></td>
-		</tr>
-		<tr>
-		  <td height="39">用户名:</td>
+		  <td height="60">用户名:</td>
 		  <td align="center"><input type="text" name="admin_user" class="inputcss" size="14"></td>
 		  <td></td>
 		  <td width="225" align="center">密码: 
@@ -44,6 +38,13 @@
 		  <td width="91"><input type="image" name="imageField" src="images/dl_03.gif"></td>
 		  <td width="110"><input type="image" name="reset" src="images/dl_04.gif" onClick="form.reset();return false;" class="inputcss" ></td>
 		</tr>
+		<tr>
+		  <td width="53" height="240"></td>
+		  <td width="94"></td>
+		  <td width="62"></td>
+		  <td colspan="3"></td>
+		</tr>
+		
 		<tr>
 		  <td height="34"></td>
 		  <td></td>
@@ -57,8 +58,8 @@
 </table>
 <?php
  if(isset($_POST['admin_user']) || isset($_POST['admin_pass'])){
- 	$conn=mysql_connect("localhost","root","qwer1234");
-	mysql_select_db("db_test",$conn);
+ 	$conn=mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+	mysql_select_db("app_safemanagent",$conn);
     $admin_user=$_POST['admin_user'];
     $admin_pass=$_POST['admin_pass'];
 	$select =mysql_query("select * from tb_admin where admin_user='".$_POST['admin_user']."' and admin_pass='".$_POST['admin_pass']."'",$conn);
